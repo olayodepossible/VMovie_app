@@ -1,18 +1,21 @@
- <template>
+<template>
   <div id="app">
-    <Header />
-    <MoviesList />
+    <Header :title="title" />
+    <router-view />
   </div>
 </template>
 
 <script>
-import MoviesList from "@/components/MoviesList";
 import Header from "./components/TheHeader";
 
 export default {
   name: "App",
+  data() {
+    return {
+      title: "The Header",
+    };
+  },
   components: {
-    MoviesList,
     Header,
   },
 };

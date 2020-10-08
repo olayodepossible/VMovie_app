@@ -1,12 +1,12 @@
 <template>
-  <img class="card--image" :src="posterImage" :alt="movie.title" />
+  <img :src="posterImage" :alt="movie.title" />
 </template>
 
 <script>
 export default {
   props: ["movie"],
   computed: {
-    posterImage: function () {
+    posterImage: function() {
       return `https://image.tmdb.org/t/p/w200/${this.movie.poster_path}`;
     },
   },
